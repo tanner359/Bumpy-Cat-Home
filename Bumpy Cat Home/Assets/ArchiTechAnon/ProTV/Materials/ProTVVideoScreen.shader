@@ -40,7 +40,6 @@ Shader "ProTV/VideoScreen"
 		bool IsInMirror() {
 			return unity_CameraProjection[2][0] != 0.f || unity_CameraProjection[2][1] != 0.f;
 		}
-
 		// Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
 		// See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
 		// #pragma instancing_options assumeuniformscaling
@@ -91,5 +90,5 @@ Shader "ProTV/VideoScreen"
 	}
 
 	FallBack "Diffuse"
-	// CustomEditor "RealtimeEmissiveGammaGUI"
+	CustomEditor "RealtimeEmissiveGammaGUI"
 }

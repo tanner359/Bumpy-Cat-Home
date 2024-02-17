@@ -12,43 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
   m_Name: RoomSettings
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 056a06b3440fb294aabac6b587b5d511,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: e311cfd77eae5d94e921ee3c759880e0,
     type: 2}
   udonAssembly: ".data_start\r\n\r\n    .export slider\r\n    .export floorMesh\r\n   
     .export floorGrid\r\n    .export toggle\r\n    .export tvObjects\r\n    .export
     tvToggle\r\n    \r\n    __instance_0: %UnityEngineMaterial, null\r\n    __name_0:
-    %SystemString, null\r\n    __value_0: %UnityEngineColor, null\r\n    __Single_0:
-    %SystemSingle, null\r\n    __Single_1: %SystemSingle, null\r\n    __Single_2:
-    %SystemSingle, null\r\n    __Single_3: %SystemSingle, null\r\n    __instance_1:
-    %UnityEngineColor, null\r\n    __instance_3: %UnityEngineColor, null\r\n    __instance_4:
-    %UnityEngineColor, null\r\n    __instance_2: %UnityEngineMaterial, null\r\n   
-    __name_1: %SystemString, null\r\n    __instance_5: %UnityEngineUISlider, null\r\n   
-    __instance_6: %UnityEngineMeshRenderer, null\r\n    __value_1: %SystemBoolean,
-    null\r\n    __instance_7: %UnityEngineUIToggle, null\r\n    __index_0: %SystemInt32,
-    null\r\n    __condition_0: %SystemBoolean, null\r\n    __instance_9: %UnityEngineGameObject,
-    this\r\n    __value_2: %SystemBoolean, null\r\n    __instance_A: %UnityEngineGameObjectArray,
-    null\r\n    __Int32_0: %SystemInt32, null\r\n    __start_0: %SystemInt32, null\r\n   
-    __end_0: %SystemInt32, null\r\n    __step_0: %SystemInt32, null\r\n    __instance_8:
-    %UnityEngineGameObjectArray, null\r\n    __instance_B: %UnityEngineUIToggle,
-    null\r\n    slider: %UnityEngineUISlider, null\r\n    floorMesh: %UnityEngineMeshRenderer,
-    null\r\n    floorGrid: %UnityEngineMaterial, null\r\n    toggle: %UnityEngineUIToggle,
-    null\r\n    tvObjects: %UnityEngineGameObjectArray, null\r\n    tvToggle: %UnityEngineUIToggle,
-    null\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n    .export _Transparency\r\n   
-    \r\n    _Transparency:\r\n    \r\n        PUSH, floorGrid\r\n        PUSH, __instance_0\r\n       
-    COPY\r\n        PUSH, floorGrid\r\n        PUSH, __instance_2\r\n        COPY\r\n       
-    PUSH, __instance_2\r\n        PUSH, __name_1\r\n        PUSH, __instance_1\r\n       
-    EXTERN, \"UnityEngineMaterial.__GetColor__SystemString__UnityEngineColor\"\r\n       
-    PUSH, __instance_1\r\n        PUSH, __Single_0\r\n        EXTERN, \"UnityEngineColor.__get_r__SystemSingle\"\r\n       
+    %SystemString, null\r\n    __value_0: %UnityEngineColor, null\r\n    __r_0: %SystemSingle,
+    null\r\n    __g_0: %SystemSingle, null\r\n    __b_0: %SystemSingle, null\r\n   
+    __a_0: %SystemSingle, null\r\n    __instance_1: %UnityEngineColor, null\r\n   
+    __instance_3: %UnityEngineColor, null\r\n    __instance_4: %UnityEngineColor,
+    null\r\n    __instance_2: %UnityEngineMaterial, null\r\n    __name_1: %SystemString,
+    null\r\n    __instance_5: %UnityEngineUISlider, null\r\n    __instance_6: %UnityEngineMeshRenderer,
+    null\r\n    __value_1: %SystemBoolean, null\r\n    __instance_7: %UnityEngineUIToggle,
+    null\r\n    __index_0: %SystemInt32, null\r\n    __condition_0: %SystemBoolean,
+    null\r\n    __instance_9: %UnityEngineGameObject, this\r\n    __value_2: %SystemBoolean,
+    null\r\n    __instance_A: %UnityEngineGameObjectArray, null\r\n    __Int32_0:
+    %SystemInt32, null\r\n    __start_0: %SystemInt32, null\r\n    __end_0: %SystemInt32,
+    null\r\n    __step_0: %SystemInt32, null\r\n    __instance_8: %UnityEngineGameObjectArray,
+    null\r\n    __instance_B: %UnityEngineUIToggle, null\r\n    slider: %UnityEngineUISlider,
+    null\r\n    floorMesh: %UnityEngineMeshRenderer, null\r\n    floorGrid: %UnityEngineMaterial,
+    null\r\n    toggle: %UnityEngineUIToggle, null\r\n    tvObjects: %UnityEngineGameObjectArray,
+    null\r\n    tvToggle: %UnityEngineUIToggle, null\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n   
+    .export _Transparency\r\n    \r\n    _Transparency:\r\n    \r\n        PUSH,
+    floorGrid\r\n        PUSH, __instance_0\r\n        COPY\r\n        PUSH, floorGrid\r\n       
+    PUSH, __instance_2\r\n        COPY\r\n        PUSH, __instance_2\r\n        PUSH,
+    __name_1\r\n        PUSH, __instance_1\r\n        EXTERN, \"UnityEngineMaterial.__GetColor__SystemString__UnityEngineColor\"\r\n       
+    PUSH, __instance_1\r\n        PUSH, __r_0\r\n        EXTERN, \"UnityEngineColor.__get_r__SystemSingle\"\r\n       
     PUSH, floorGrid\r\n        PUSH, __instance_2\r\n        COPY\r\n        PUSH,
     __instance_1\r\n        PUSH, __instance_3\r\n        COPY\r\n        PUSH, __instance_1\r\n       
-    PUSH, __Single_1\r\n        EXTERN, \"UnityEngineColor.__get_g__SystemSingle\"\r\n       
+    PUSH, __g_0\r\n        EXTERN, \"UnityEngineColor.__get_g__SystemSingle\"\r\n       
     PUSH, floorGrid\r\n        PUSH, __instance_2\r\n        COPY\r\n        PUSH,
     __instance_1\r\n        PUSH, __instance_4\r\n        COPY\r\n        PUSH, __instance_1\r\n       
-    PUSH, __Single_2\r\n        EXTERN, \"UnityEngineColor.__get_b__SystemSingle\"\r\n       
+    PUSH, __b_0\r\n        EXTERN, \"UnityEngineColor.__get_b__SystemSingle\"\r\n       
     PUSH, slider\r\n        PUSH, __instance_5\r\n        COPY\r\n        PUSH, __instance_5\r\n       
-    PUSH, __Single_3\r\n        EXTERN, \"UnityEngineUISlider.__get_value__SystemSingle\"\r\n       
-    PUSH, __Single_0\r\n        PUSH, __Single_1\r\n        PUSH, __Single_2\r\n       
-    PUSH, __Single_3\r\n        PUSH, __value_0\r\n        EXTERN, \"UnityEngineColor.__ctor__SystemSingle_SystemSingle_SystemSingle_SystemSingle__UnityEngineColor\"\r\n       
+    PUSH, __a_0\r\n        EXTERN, \"UnityEngineUISlider.__get_value__SystemSingle\"\r\n       
+    PUSH, __r_0\r\n        PUSH, __g_0\r\n        PUSH, __b_0\r\n        PUSH, __a_0\r\n       
+    PUSH, __value_0\r\n        EXTERN, \"UnityEngineColor.__ctor__SystemSingle_SystemSingle_SystemSingle_SystemSingle__UnityEngineColor\"\r\n       
     PUSH, __instance_0\r\n        PUSH, __name_0\r\n        PUSH, __value_0\r\n       
     EXTERN, \"UnityEngineMaterial.__SetColor__SystemString_UnityEngineColor__SystemVoid\"\r\n       
     JUMP, 0xFFFFFFFC\r\n    \r\n    .export _ToggleFloor\r\n    \r\n    _ToggleFloor:\r\n   
@@ -504,8 +503,5 @@ MonoBehaviour:
   - type: 5
     uid: 021d2d65-f7db-4462-b624-b4d3e919ddfe
     jsonData: '{"visible":true,"layout":{"serializedVersion":"2","x":51.0,"y":98.0,"width":236.0,"height":252.0}}'
-  viewTransform:
-    position: {x: 427, y: -64}
-    scale: 0.32690176
   version: 1.0.0
   showAssembly: 0
