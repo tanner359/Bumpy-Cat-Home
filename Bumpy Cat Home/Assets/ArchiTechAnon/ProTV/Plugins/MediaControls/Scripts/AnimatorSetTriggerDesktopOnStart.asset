@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
   m_Name: AnimatorSetTriggerDesktopOnStart
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 9216d0faea749b14fbb797307ae0797b,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 1125ea9c915abac46bd65ad262923d99,
     type: 2}
   udonAssembly: ".data_start\r\n\r\n    \r\n    __Boolean_0: %SystemBoolean, null\r\n   
     __instance_0: %VRCSDKBaseVRCPlayerApi, null\r\n    __instance_1: %UnityEngineAnimator,
@@ -111,8 +111,5 @@ MonoBehaviour:
   - type: 5
     uid: f0868d6b-b0eb-4a10-a8ea-f6f06402f108
     jsonData: '{"visible":true,"layout":{"serializedVersion":"2","x":10.0,"y":135.0,"width":200.0,"height":150.0}}'
-  viewTransform:
-    position: {x: 0, y: -45}
-    scale: 1
   version: 1.0.0
   showAssembly: 0
