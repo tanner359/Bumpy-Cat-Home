@@ -8,15 +8,14 @@ Shader "Custom/HDR_Text"
     }
 
     SubShader {
-
         Tags {
             "Queue"="Transparent"
             "IgnoreProjector"="True"
             "RenderType"="Transparent"
             "PreviewType"="Plane"
         }
-        Lighting Off Cull Back ZTest Always ZWrite Off
-        Blend SrcAlpha OneMinusSrcAlpha
+        Lighting Off Cull Off ZTest Off ZWrite Off
+        Blend SrcAlpha OneMinusDstAlpha 
 
         Pass {
             CGPROGRAM
@@ -54,6 +53,7 @@ Shader "Custom/HDR_Text"
                 o.texcoord = TRANSFORM_TEX(v.texcoord,_MainTex);
                 return o;
             }
+            
 
             fixed4 frag (v2f i) : SV_Target
             {

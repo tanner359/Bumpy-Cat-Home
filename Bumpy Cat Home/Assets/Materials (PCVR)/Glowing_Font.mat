@@ -8,12 +8,11 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Glowing_Font
-  m_Shader: {fileID: 4800000, guid: 20da77a4e53b2204aaa1133e40ab718f, type: 3}
+  m_Shader: {fileID: 4800000, guid: 227f8f3e5e345134bac24e124c0233aa, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
-  - UNITY_UI_ALPHACLIP
   - _ALPHATEST_ON
   - _EMISSION
   - _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
@@ -120,12 +119,12 @@ Material:
     - _StencilWriteMask: 255
     - _Strength: 0.204
     - _UVSec: 0
-    - _UseUIAlphaClip: 1
+    - _UseUIAlphaClip: 0
     - _ZWrite: 1
     m_Colors:
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 5.9921575, g: 5.9921575, b: 5.9921575, a: 1}
+    - _Color: {r: 8, g: 8, b: 8, a: 1}
+    - _EmissionColor: {r: 19.037523, g: 0, b: 0, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _Specular: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
