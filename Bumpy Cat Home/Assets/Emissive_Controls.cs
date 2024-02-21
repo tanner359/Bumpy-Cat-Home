@@ -12,7 +12,7 @@ using VRC.Udon;
 public class Emissive_Controls : UdonSharpBehaviour
 {
     public Material material;
-    public Renderer referenceRenderer;
+    public Renderer[] referenceRenderer;
 
     public Slider r;
     public Slider g;
@@ -25,11 +25,16 @@ public class Emissive_Controls : UdonSharpBehaviour
         else{
             material.EnableKeyword("_EMISSION");
         }
-        RendererExtensions.UpdateGIMaterials(referenceRenderer);
+        foreach(Renderer r in referenceRenderer){
+            RendererExtensions.UpdateGIMaterials(r);
+        }
+        
     }
 
     public void Update_Color(){
-        material.SetColor("_EmissionColor", new Color(r.value,g.value,b.value, 1) * intesity.value);
-        RendererExtensions.UpdateGIMaterials(referenceRenderer);
+        material.SetColor("_EmissionColor", new Color(r.value,g.value,b.value, 1) * (intesity.value * 2));
+        foreach(Renderer r in referenceRenderer){
+            RendererExtensions.UpdateGIMaterials(r);
+        }
     }
 }
