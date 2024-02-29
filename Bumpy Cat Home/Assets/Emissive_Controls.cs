@@ -29,9 +29,15 @@ public class Emissive_Controls : UdonSharpBehaviour
     public void Emission_Toggle(){
        if(material.IsKeywordEnabled("_EMISSION")){
             material.DisableKeyword("_EMISSION");
+            foreach(Light l in affectedLights){
+            l.enabled = false;
+            }
         }
         else{
             material.EnableKeyword("_EMISSION");
+            foreach(Light l in affectedLights){
+            l.enabled = true;
+            }
         }
         Refresh();
     }
