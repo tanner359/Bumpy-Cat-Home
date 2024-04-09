@@ -9,7 +9,7 @@ LightingSettings:
   m_Name: Default Lighting
   serializedVersion: 6
   m_GIWorkflowMode: 1
-  m_EnableBakedLightmaps: 1
+  m_EnableBakedLightmaps: 0
   m_EnableRealtimeLightmaps: 1
   m_RealtimeEnvironmentLighting: 1
   m_BounceScale: 1
@@ -21,7 +21,7 @@ LightingSettings:
   m_BakeResolution: 80
   m_Padding: 8
   m_LightmapCompression: 3
-  m_AO: 0
+  m_AO: 1
   m_AOMaxDistance: 1
   m_CompAOExponent: 1.36
   m_CompAOExponentDirect: 0
