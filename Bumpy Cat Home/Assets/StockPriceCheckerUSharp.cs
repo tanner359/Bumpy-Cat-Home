@@ -1,29 +1,21 @@
-﻿using UdonSharp;
+using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
-using VRC.Udon;
-using System.Collections;
-using VRC.SDK3.Network;
 using VRC.SDK3.StringLoading;
-using System.Security.Policy;
 using VRC.Udon.Common.Interfaces;
 using System;
 using UnityEngine.UI;
-using Unity.Mathematics;
 using VRC.SDK3.Components;
-using VRC.SDKBase.Editor.Source;
-using JetBrains.Annotations;
-using VRC.Udon.Serialization.OdinSerializer.Utilities;
-using VRC.Udon.Editor.ProgramSources.UdonGraphProgram.UI;
+
 
 
 
 public class StockPriceCheckerUSharp : UdonSharpBehaviour
 {    
+    public VRCUrl sourceURL;
     public Text ticker;
     public Text price;
     public Text change;
-    public Text tickerInputText;
     public float requestRate = 5f;
     public float requestTime = 0f;
     public VRCUrl inputURL;
@@ -38,12 +30,16 @@ public class StockPriceCheckerUSharp : UdonSharpBehaviour
 
     public void Start()
     {
-        price.text = "Loading Data...";
-        change.text = "Loading Data...";
+        if(tickerInput){
+            tickerInput.SetUrl(sourceURL);
+            return;
+        }
+        ticker.text = "Loading Data";
         VRCStringDownloader.LoadUrl(inputURL, (IUdonEventReceiver)this);
     }
 
     public void Update(){
+        if(inputURL == null){return;}
         if(requestTime < requestRate){
             requestTime += Time.deltaTime;
         }
@@ -77,7 +73,8 @@ public class StockPriceCheckerUSharp : UdonSharpBehaviour
 
     public override void OnStringLoadError(IVRCStringDownload result)
     {
-        base.OnStringLoadError(result);
+        //base.OnStringLoadError(result);
+        Debug.Log(result.Error);
         InputError();
     }
 
@@ -89,11 +86,15 @@ public class StockPriceCheckerUSharp : UdonSharpBehaviour
     }
 
     public void QueryTickerInput(){
-        //VRCStringDownloader.LoadUrl(tickerInput.GetUrl(), (IUdonEventReceiver)this);
+        inputURL = tickerInput.GetUrl();
+        VRCStringDownloader.LoadUrl(inputURL, (IUdonEventReceiver)this);
+        ticker.text = "Loading Data...";
+        tickerInput.SetUrl(sourceURL);
     }
 
     private string GetTickerName(string rawData){
         int x = rawData.IndexOf("<title>");
+        if(x == -1){return "null";}
         string query = rawData.Substring(x, 40);
         int vstart = query.IndexOf(">")+1;
         string value = "";
@@ -105,10 +106,11 @@ public class StockPriceCheckerUSharp : UdonSharpBehaviour
                 break;
             }
         }
-        return value;
+        return value.Replace("amp;", "");
     }
     private float GetStockPrice(string rawData){
         int x = rawData.IndexOf("data-field=\"regularMarketPrice\" data-trend=\"none\" data-pricehint=\"2\" value");
+        if(x == -1){return 0.00f;}
         string query = rawData.Substring(x, 100);
         int vstart = query.IndexOf("value")+7;
         string value = "";
@@ -124,6 +126,7 @@ public class StockPriceCheckerUSharp : UdonSharpBehaviour
     }
     private float GetStockChange(string rawData){
         int x = rawData.IndexOf("data-field=\"regularMarketChange\" data-trend=\"txt\" data-pricehint=\"2\" value");
+        if(x == -1){return 0.00f;}
         string query = rawData.Substring(x, 100);
         int vstart = query.IndexOf("value")+7;
         string value = "";
