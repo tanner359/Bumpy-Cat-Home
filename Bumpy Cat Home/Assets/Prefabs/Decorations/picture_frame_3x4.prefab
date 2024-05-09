@@ -68,6 +68,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: picture_frame_3x4
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: edfd9104d44ba964fbd3201de9eef403,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

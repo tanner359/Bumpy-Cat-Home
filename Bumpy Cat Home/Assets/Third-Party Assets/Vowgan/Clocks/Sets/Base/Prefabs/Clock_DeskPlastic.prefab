@@ -18,6 +18,11 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 881705191541257212, guid: 8f3b151b806ffd5449d1569ec7e20025,
+        type: 3}
+      propertyPath: serializationData.SerializedFormat
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1755858514603029793, guid: 8f3b151b806ffd5449d1569ec7e20025,
         type: 3}
       propertyPath: useLocalTimeZone
@@ -138,7 +143,7 @@ PrefabInstance:
         type: 3}
       propertyPath: serializedProgramAsset
       value: 
-      objectReference: {fileID: 11400000, guid: d64dbd8f866eb9f46a72c49e6ec43be6,
+      objectReference: {fileID: 11400000, guid: fe2757cb00528d74986d39627b868d7f,
         type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
