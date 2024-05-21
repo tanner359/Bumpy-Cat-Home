@@ -66,8 +66,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FurTexture:
-        m_Texture: {fileID: 2800000, guid: 4bba7f70545f3ec4c822a703d10567fa, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: 9381290d58cb3f548ba581e1ae7ead2f, type: 3}
+        m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - _HSVMask:
         m_Texture: {fileID: 0}
@@ -233,7 +233,7 @@ Material:
     - _Stencil: 0
     - _StencilComp: 0
     - _StencilOp: 0
-    - _StrandAmount: 17
+    - _StrandAmount: 33
     - _TilingMode: 0
     - _UVDiscardChannel: 0
     - _UVDiscardMode: 0
