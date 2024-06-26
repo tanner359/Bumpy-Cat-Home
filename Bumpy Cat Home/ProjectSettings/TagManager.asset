@@ -8,11 +8,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - reserved3
   - Water
   - UI
-  - 
-  - 
+  - reserved6
+  - reserved7
   - Interactive
   - Player
   - PlayerLocal
@@ -24,13 +24,13 @@ TagManager:
   - StereoRight
   - Walkthrough
   - MirrorReflection
-  - reserved2
-  - reserved3
+  - InternalUI
+  - HardwareObjects
   - reserved4
   - Post-Process
   - Ground
   - Transparent Bake
-  - 
+  - Clouds/Fog
   - 
   - 
   - 
