@@ -1,0 +1,20 @@
+SafeSpace prefab
+Update 2pass transparency(no longer transparent) to do more
+flip back face normals
+Fix positioning with spectrum circle
+add audio link to glitter
+liltoon 2500 no skybox shitd
+ignore casted shadows on stylized spec wasn't working
+multi ramp single uv shading
+multi layer border doesn't alter casted shadows
+Make reaslistic lighting properly respect the cap or lack there of in light data https://discord.com/channels/550477546958094348/550477704617787422/1131091815320260619
+animating uv when locked in throws errors with geometric dissolve https://discord.com/channels/550477546958094348/550477704617787422/1131639521864331384
+matcap and rimlight color intensity adds to alpha
+
+GEO DISSOLVE
+Dissolve to point in local/world space possibly with curve so you can do the effect of getting sucked up into something
+Dissolve direction dictated by flow map/normal map
+polar position billboards
+audio link dissolve/flow
+
+COMPLETED

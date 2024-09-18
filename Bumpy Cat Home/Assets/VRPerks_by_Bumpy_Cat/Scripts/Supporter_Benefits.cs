@@ -4,23 +4,8 @@ using UnityEngine;
 using VRC.SDKBase;
 using VRC.SDK3.StringLoading;
 using VRC.Udon.Common.Interfaces;
-using System;
-using VRC.Udon.Common;
-using UnityEngine.UI;
-using VRC.SDK3.Components;
-using System.Collections.Generic;
-using System.Diagnostics.PerformanceData;
 using VRC.SDK3.Data;
-using VRC.Core;
-using VRC.Udon.Wrapper.Modules;
-using System.Diagnostics;
 using Debug = UnityEngine.Debug;
-using System.Linq;
-using Unity.Collections;
-using System.ComponentModel;
-using VRC.Udon;
-using UdonSharp.Internal;
-using HarmonyLib;
 
 namespace BumpyCat{
 public class Supporter_Benefits : UdonSharpBehaviour
@@ -59,10 +44,6 @@ public class Supporter_Benefits : UdonSharpBehaviour
             SUPPORT_LIST[i].Initialize(this);
         }
     }
-
-    public void Update(){
-    }
-
     /*DISCORD JSON STRUCTURE EXAMPLE: 3 DISCORD MEMBERS
     -> STRING LOAD -> JSON DATA
     -> JSON DATA -> DATALIST(3 MEMBERS)
@@ -145,12 +126,13 @@ public class Supporter_Benefits : UdonSharpBehaviour
         for(int i = 0; i < DISCORD_MEMBERS.DataList.Count; i++){
             for(int j = 0; j < roles[i].DataList.Count; j++){
                 if(roles[i].DataList[j].String == role_id.ToString()){
-                    result += names[i].String + " ";
+                    result += names[i].String + "\n";
                 }
             }
         }
         return result;
     }
+    /// <summary>Get names of Discord members who have the supporter role</summary>
     public string Get_Supporter_Names(){
         string[] keys = {"user", "global_name"};
         DataList result = PARSE_JSON(DISCORD_MEMBERS, keys, 0).DataList;
